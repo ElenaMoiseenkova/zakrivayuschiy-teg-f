@@ -1,0 +1,24 @@
+:root {
+  --border-accent: 2px solid #000;
+  --border-transparent: 2px solid transparent;
+  --button-text-color: #fff;
+  --button-background-color: #000;
+  --color-background: #fff;
+  --color-stroke: #fff;
+  --color-contour-svg: #000;
+  --color-body-svg: #F00;
+  --transparent-svg: 0;
+  --font-page: 'Inter-Variable', sans-serif;
+  --font-accent: 'PressStart2P-Regular', sans-serif;
+  --font-normal: 400;
+  --font-bold: 700;
+  --inline-size-content: min(100%, 700px);
+  --main-color: #000;
+  --first-line: #d3d3d3;
+  --second-line: #d3d3d3, transparent;
+  --first-solid-color: #e7e7e7;
+  --second-solid-color: #1a1a1a;
+  --gradient-background: repeating-linear-gradient(to right, var(--first-line) 0 2px, var(--second-line) 2px 4px),
+    repeating-linear-gradient(to bottom, var(--first-line) 0 2px, var(--second-line) 2px 4px),
+    linear-gradient(to bottom, var(--first-solid-color) 0.01%, var(--second-solid-color));
+}

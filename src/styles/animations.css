@@ -1,4 +1,4 @@
-/* Здесь вы напишете основную часть стилей страницы.
+/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
 
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
 ✦ like-icon — для svg-иконки анимированного сердца
@@ -9,8 +9,28 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+@keyframes filling {
+  100% {
+    fill: var(--color-body-svg);
+  }
+}
 
-.page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+@keyframes contouring {
+  100% {
+    fill: var(--color-body-svg);
+  }
+}
+
+@keyframes scaling {
+  100% {
+    transform: scale(1.25);
+    transform-origin: center;
+  }
+}
+
+@keyframes filling-sparks {
+  to {
+    fill: var(--color-body-svg);
+    opacity: 1;
+  }
 }
