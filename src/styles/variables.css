@@ -9,10 +9,10 @@
   --color-body-svg: #F00;
   --transparent-svg: 0;
   --font-page: 'Inter-Variable', sans-serif;
-  --font-accent: 'PressStart2P-Regular', sans-serif;
+  --font-accent: 'PressStart2P', fantasy;
   --font-normal: 400;
   --font-bold: 700;
-  --inline-size-content: min(100%, 700px);
+  --content-inline-size: min(100%, 700px);
   --main-color: #000;
   --first-line: #d3d3d3;
   --second-line: #d3d3d3, transparent;

@@ -9,19 +9,23 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+/* stylelint-disable-next-line at-rule-empty-line-before */
 @keyframes filling {
+
   100% {
     fill: var(--color-body-svg);
   }
 }
 
 @keyframes contouring {
+
   100% {
     fill: var(--color-body-svg);
   }
 }
 
 @keyframes scaling {
+
   100% {
     transform: scale(1.25);
     transform-origin: center;
@@ -29,7 +33,8 @@
 }
 
 @keyframes filling-sparks {
-  to {
+
+  100% {
     fill: var(--color-body-svg);
     opacity: 1;
   }
