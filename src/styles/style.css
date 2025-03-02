@@ -61,7 +61,7 @@
   background-image: var(--gradient-background);
   background-size: cover;
   background-attachment: fixed;
-  font-variation-settings: "wght"var(--font-normal);
+  font-variation-settings: 'wght'var(--font-normal);
 }
 
 .header {
@@ -73,7 +73,7 @@
   inline-size: min(100%, 700px);
   border: var(--border-accent);
   margin-block: 100px;
-  padding: clamp(7.5rem, 6.362rem + 2.73vw, 8rem) clamp(0.875rem, -6.723rem + 32.77vw, 7.531rem);
+  padding-block: clamp(7.5rem, 6.362rem + 2.73vw, 8rem);
   background-color: var(--color-background);
 }
 
@@ -103,11 +103,12 @@
 .card-heading {
   font-variation-settings: 'wght'var(--font-bold);
   font-size: 18px;
-  padding: 4px 11px 10px;
+  padding: 6px 0 3px 10px;
 }
 
 .image-text-container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 27px;
   position: relative;
   inline-size: 100%;
@@ -118,8 +119,9 @@
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
-  border: var(--border-accent);
   aspect-ratio: 1/1;
+  border-top: var(--border-accent);
+  border-bottom: var(--border-accent);
 }
 
 .opacity {
@@ -153,8 +155,8 @@
 .label {
   position: absolute;
   font-family: var(--font-accent);
-  inset-block-start: 24px;
-  inset-inline-end: 13px;
+  inset-block-start: 27px;
+  inset-inline-end: 25px;
   font-size: 14px;
   text-transform: uppercase;
   text-shadow:
@@ -168,7 +170,6 @@
 }
 
 @supports (text-stroke: 1px var(--color-stroke)) or (-webkit-text-stroke: 1px var(--color-stroke)) {
-
   .label {
     -webkit-text-stroke: 1px var(--color-stroke);
     text-stroke: 1px var(--color-stroke);
@@ -177,13 +178,17 @@
 }
 
 .text-container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 27px;
-  padding: 0 25px 25px;
+  padding-block: 0 25px;
 }
 
 .card-text {
   line-height: 21px;
+  font-size: 18px;
+  font-variation-settings: 'wght'var(--font-normal);
+  padding-inline: 25px;
 }
 
 .button-container {
@@ -284,10 +289,10 @@
 
 .dialog-container {
   display: flex;
-  justify-items:flex-start;
+  justify-items: flex-start;
   align-items: center;
   gap: 20px;
-  block-size: 63px ;
+  block-size: 63px;
 }
 
 .window-button {
@@ -320,26 +325,6 @@
   position: absolute;
 }
 
-.like-icon.is-liked {
-  animation: scaling 0.3s 0.1s ease-in reverse;
-}
-
-.like-icon.is-liked .core {
-  animation: filling 0.3s linear forwards;
-}
-
-.like-icon.is-liked .main-body {
-  animation: filling 0.3s 0.05s linear forwards;
-}
-
-.like-icon.is-liked .contour {
-  animation: contouring 0.3s 0.06s linear forwards;
-}
-
-.like-icon.is-liked .sparks {
-  animation: filling-sparks 0.3s 0.3s ease-in reverse;
-}
-
 .card__icon-button:hover .like-icon .main-body {
   fill: var(--color-contour-svg);
   transition: fill 0.3s 0.05s linear;
@@ -360,14 +345,40 @@
   transition: fill 0.3s linear;
 }
 
+.like-icon.is-liked .heart {
+  animation: scaling 0.3s 0.1s ease-in reverse;
+  transform-origin: center;
+}
+
+.like-icon.is-liked .core {
+  animation: filling 0.3s linear forwards;
+}
+
+.like-icon.is-liked .main-body {
+  animation: filling 0.3s 0.05s linear forwards;
+}
+
+.like-icon.is-liked .contour {
+  animation: filling 0.3s 0.06s linear forwards;
+}
+
+.like-icon.is-liked .sparks {
+  animation: filling-sparks 0.3s 0.3s ease-in reverse;
+}
+
 @media (width<=375px) {
+  .card-heading {
+    padding: 3.5px 0 5.5px 10px;
+  }
 
   .card_heading-large-padding {
     padding: 4px 10px 6px;
+    text-align: left;
   }
 
-  .card-heading {
-    padding: 3.5px 10px 5.5px;
+  .label {
+    inset-block-start: 25px;
+    inset-inline-end: 11px;
   }
 
   .image-text-container {
@@ -378,7 +389,7 @@
     flex-direction: column;
     inline-size: 306px;
     block-size: 80px;
-    margin-inline: 34.5px;
+    margin-inline: auto;
     margin-block-end: 100px;
     gap: 8px;
   }
