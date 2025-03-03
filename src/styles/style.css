@@ -267,7 +267,6 @@
   padding: 30px;
   inline-size: 357px;
   border: var(--border-accent);
-  min-block-size: 191px;
   margin: auto;
 }
 
@@ -370,7 +369,7 @@
 }
 
 @media (width<=375px) {
-  
+
   .card-heading {
     padding: 3.5px 0 5.5px 10px;
   }
