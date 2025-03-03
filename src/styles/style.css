@@ -51,12 +51,14 @@
 }
 
 .page {
-  display: grid;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: var(--font-page);
   color: var(--main-color);
   font-size: 18px;
   min-inline-size: 320px;
+  inline-size: 100%;
   min-block-size: 100dvb;
   background-image: var(--gradient-background);
   background-size: cover;
@@ -66,13 +68,13 @@
 
 .header {
   display: flex;
-  justify-content: center;
+  justify-items: center;
   align-items: center;
   flex-direction: column;
   font-family: var(--font-accent);
-  inline-size: min(100%, 700px);
+  inline-size:  min(100%, 700px);
   border: var(--border-accent);
-  margin-block: 100px;
+  margin: 100px auto;
   padding-block: clamp(7.5rem, 6.362rem + 2.73vw, 8rem);
   background-color: var(--color-background);
 }
@@ -170,6 +172,7 @@
 }
 
 @supports (text-stroke: 1px var(--color-stroke)) or (-webkit-text-stroke: 1px var(--color-stroke)) {
+
   .label {
     -webkit-text-stroke: 1px var(--color-stroke);
     text-stroke: 1px var(--color-stroke);
@@ -367,6 +370,7 @@
 }
 
 @media (width<=375px) {
+  
   .card-heading {
     padding: 3.5px 0 5.5px 10px;
   }
@@ -402,7 +406,6 @@
   .dialog-window[open] {
     padding-inline-start: 37px;
     inline-size: 341px;
-    opacity: 0.5;
   }
 
   .window-button {
